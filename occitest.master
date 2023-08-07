@@ -1,0 +1,280 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register tagprefix="SharePoint" namespace="Microsoft.SharePoint.WebControls" assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<html dir="ltr">
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="icon" type="image/png" sizes="32x32" href="../../SiteAssets/img/favicon-32x32.png">
+<link rel="stylesheet" type="text/css" href="../../_layouts/15/1033/styles/Themable/corev15.css" />
+        <script type="text/javascript" src="../../_layouts/15/init.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/MicrosoftAjax.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/1033/initstrings.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/1033/strings.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/SP.UI.Controls.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/clienttemplates.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/clientforms.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/clientpeoplepicker.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/autofill.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/sp.runtime.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/sp.init.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/sp.ui.dialog.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/sp.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/core.js"></script>
+        <script type="text/javascript" src="../../_layouts/15/SP.Core.JS"></script> 
+ 
+
+<SharePoint:RobotsMetaTag runat="server"></SharePoint:RobotsMetaTag>
+ 
+
+<RobotsMetaTag runat="server"></RobotsMetaTag>
+    <title>NHTSA Site</title>
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="../Font-Awesome5/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="../../SiteAssets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Material Design Bootstrap -->
+    <link href="../../SiteAssets/css/mdb.min.css" rel="stylesheet"/>
+    <!-- Your custom styles (optional) -->
+    <link href="../../SiteAssets/css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../SiteAssets/js/jquery-ui-1.12.1/jquery-ui.min.css"/> 
+    <link href="../../SiteAssets/css/toastr.css" rel="stylesheet" />
+    <link href="../../SiteAssets/css/addons/datatables.min.css" rel="stylesheet" />
+   <link href="../../SiteAssets/css/addons/datatables-select.min.css" rel="stylesheet" />
+      <link href="../../SiteAssets/css/addons-pro/chat.min.css" rel="stylesheet" />
+     
+
+
+
+ 
+ 
+
+    <style type="text/css">
+.full-height, .full-height body, .full-height header, .full-height header .view {
+    height: 610px;
+        }
+ .jumbotron-text{
+	font-size:20px;
+}
+
+    </style>
+    <!--Main Layout-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+   
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  
+      <!-- custom JavaScript --> 
+    <script type="text/javascript" src="../js/jquery.SPServices.min.js"></script>
+    <script type="text/javascript" src="../js/PeoplePicker.js"></script>
+         <!-- custom JavaScript 
+    <script type="text/javascript" src="js/custom.js?rev=23"></script> --> 
+    <script type="text/javascript" src="custom.js?rev=40"></script>
+ 
+        <script src="../js/toastr.js"></script>
+         <script src="../js/addons/datatables.min.js"></script>
+         <script src="../js/addons/datatables-select.min.js"></script>
+          <script type="text/javascript"  src="../js/jquery.countdown.min.js"></script>
+              <script type="text/javascript"  src="../js/EMails.js"></script>
+
+ 
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body style="overflow:auto">
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark   scrolling-navbar">
+        <a class="navbar-brand" href="Home.aspx"><img src="../img/NhtsaLogo.png"/>
+      
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item ">
+                    <a class="nav-link" href="Home.aspx">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Requests.aspx">Requests</a>
+                </li>
+    
+
+                <li class="nav-item dropdown" >
+                            <a type="button"  href="RequestSummary.aspx" class="nav-link dropdown-toggle waves-effect waves-light" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+                                  <span>Request Summary</span >
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item waves-effect waves-light" href="RequestSummary.aspx?view=1" type="button">My Requests</a>
+                                <a class="dropdown-item waves-effect waves-light editorNavLink" style="display:none" href="RequestSummary.aspx?view=2" type="button">Approval Queue</a>
+                                <a class="dropdown-item waves-effect waves-light editorNavLink" style="display:none" href="RequestSummary.aspx?view=3" type="button">In Production</a>
+                                <a class="dropdown-item waves-effect waves-light editorNavLink" style="display:none" href="RequestSummary.aspx?view=4" type="button">Complete</a>
+                                <a class="dropdown-item waves-effect waves-light editorNavLink" style="display:none" href="RequestSummary.aspx?view=5" type="button">Archives</a>
+                                <a class="dropdown-item waves-effect waves-light editorNavLink" style="display:none" href="RequestSummary.aspx?view=6" type="button">Canceled</a>
+
+                            </div>
+                            
+                        </li>
+
+                <li style="display:none" class="nav-item">
+                    <a class="nav-link" href="#">Templates</a>
+                </li>
+                 <li style="display:none" class="nav-item">
+                    <a class="nav-link" href="#">Reporting</a>
+                </li>
+                <li style="display:none" class="nav-item">
+                    <a class="nav-link" href="WorkflowWizard.aspx">Workflows</a>
+                </li>
+
+
+            </ul>
+            <ul class="navbar-nav nav-flex-icons">
+            
+               <li class="nav-item" style="padding-top:3px;display:none"  data-toggle="tooltip" data-placement="right" title="Search">
+                    <a type="button" onclick="searchInput()"  href="#"  class="nav-link not-smooth"  data-target="#fluidModalRightInfo" data-toggle="modal"  ><i aria-hidden="true" class="fa fa-search"></i><span class="sr-only">Show or hide search input Menu</span></a>
+                </li>
+
+
+                <li class="nav-item" style="padding-top:3px;display:none"  data-toggle="tooltip" data-placement="right" title="View Alerts">
+                    <a type="button"  href="#"  class="nav-link" data-toggle="modal" data-target="#coming-soon-Modal"><i aria-hidden="true" class="fa fa-bell"></i><span class="sr-only" >View Alerts</span></a>
+                </li>
+                
+                 
+                        <li class="nav-item dropdown" >
+                            <a type="button"  href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+                                  <i class="fa fa-user-circle" ></i><span class="SPName"> Current User</span > <span class="sr-only">  While using a keyboard press enter to access profile dropdown options. To navigate forward through the dropdown options use the tab key. To navigate through the dropdown options in reverse, or to exit the dropdown menu use the shift + tab keys together</span>
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item waves-effect waves-light" href="../_layouts/15/settings.aspx">Site Settings</a>
+                            </div>
+                            
+                        </li>
+            </ul>
+        </div>
+    </nav>
+<div class="view " id="main-cover"  style=" display:none; ">
+        <div style="height:400px!important; " class="full-bg-img rgba-black-light">
+            <div class="container flex-center">
+                <div class="row ">
+                    <div class="">
+                        <div class="text-center cover-text">
+                        
+            <h1  style="font-size:65px"  class="h1-reponsive white-text text-uppercase "><span class="font-weight-bold"> Communications Services Request System</span></h1>
+             <hr class="hr-light" />
+             <p class="white-text jumbotron-text" style="font-size:22px">The Communications Services Request system  is an online tool to order, approve, and track the status of communications products and services within the Office of Communications and Consumer Information.
+
+</p>
+ 
+
+
+<!--/.Card-->        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------Secondary Cover--->
+    <div class="view " id="Secondary-cover"  style=" display:none; ">
+        <div style="height:400px!important; " class="full-bg-img rgba-black-light">
+            <div class="container flex-center">
+                <div class="row ">
+                    <div class="">
+                        <div class="text-center cover-text">
+                        
+            <h1  style="font-size:90px"  class="h1-reponsive white-text text-uppercase "><span class="font-weight-bold"><i aria-hidden="true"   class="fa fa-pencil-square-o"></i> Requests</span></h1>
+             <hr class="hr-light" />
+              <p class="white-text jumbotron-text" style="font-size:22px">
+              Start your job by creating a request. In the request, describe what you need and by when. Your approved request will be assigned a Service Advisor who will help you through the rest of the production process.
+
+</p>
+       
+
+
+<!--/.Card-->        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!----------Wizard Cover--->
+    <div class="view " id="Wizard-cover"  style=" display:none; ">
+        <div style="height:400px!important; " class="full-bg-img rgba-black-light">
+            <div class="container flex-center">
+                <div class="row ">
+                    <div class="">
+                        <div class="text-center cover-text">
+                        
+            <h1  style="font-size:90px"  class="h1-reponsive white-text text-uppercase "><span class="font-weight-bold"><i aria-hidden="true"   class=" fa  fa-magic"></i> Workflow Wizard</span></h1>
+             <hr class="hr-light" />
+              <p class="white-text jumbotron-text" style="font-size:22px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</p>
+       
+
+
+<!--/.Card-->        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="view " id="Summary-cover"  style=" display:none; ">
+        <div style="height:400px!important; " class="full-bg-img rgba-black-light">
+            <div class="container flex-center">
+                <div class="row ">
+                    <div class="">
+                        <div class="text-center cover-text">
+                        
+            <h1  style="font-size:90px"  class="h1-reponsive white-text text-uppercase "><span class="font-weight-bold"><i aria-hidden="true"   class=" fa fa-check-square-o"></i> Request Summary</span></h1>
+             <hr class="hr-light" />
+              <p class="white-text jumbotron-text" style="font-size:22px">The Request Summary allows you to check on the status of your jobs with OCCI, as well as look at jobs that have been completed or canceled.</p>
+       
+
+
+<!--/.Card-->        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<main id="main-container" class="py-5 ">
+
+
+
+ 
+	<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+ 
+</main>
+
+  <!-- MDB core JavaScript --> 
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-treeview.js "></script>
+       
+  <style type="text/css">
+  </style>
+   
+
+
+</body>
+
+</html>
